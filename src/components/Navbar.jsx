@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
     return (
         <nav className="flex justify-between items-center px-8 py-4 shadow-md">
@@ -8,20 +10,19 @@ function Navbar() {
 
             <ul className="flex gap-6 font-medium">
                 <li>
-                    <a href="/">Home</a>
+                    <Link to="/">Home</Link>
                 </li>
 
                 <li>
-                    <a href="/courses">Courses</a>
+                    <Link to="/courses">Courses</Link>
                 </li>
 
                 <li>
-                    <a href="/login">Login</a>
+                    <Link to="/login">Login</Link>
                 </li>
 
                 <li>
-                    <a href="/register">Register</a>
-                    {/* <Link to="/register">Register</Link> */}
+                    <Link to="/register">Register</Link>
                 </li>
             </ul>
         </nav>
