@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
 import CourseCard from "./CourseCard";
 
+interface Course {
+  id: number;
+  title: string;
+  instructor: string;
+  price: number;
+  imageUrl: string;
+}
+
 function CourseList() {
-  const [search, setSearch] = useState("");
-  const [courses, setCourses] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState<string>("");
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setTimeout(() => {
-      const data = [
+      const data : Course[] = [   
         {
           id: 1,
           title: "React for Beginners",
-          instructor: "John Doe",
+          instructor: "John Doe", 
           price: 49,
           imageUrl: "https://picsum.photos/300/200?1",
         },
@@ -57,9 +65,10 @@ function CourseList() {
         className="border p-2 w-full mb-6 rounded"
       />
       <div className="flex gap-6 flex-wrap">
-        {filteredCourses.map((course) => (
+        {filteredCourses.map((course: Course) => (
           <CourseCard
             key={course.id}
+            id={course.id}
             title={course.title}
             instructor={course.instructor}
             price={course.price}
