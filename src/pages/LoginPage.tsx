@@ -1,5 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import InputField from "../components/InputField";
+import api from "../services/api";
 
 function LoginPage() {
 
@@ -9,6 +11,7 @@ function LoginPage() {
     });
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     const handleChange =
         (field: "email" | "password") =>
@@ -32,11 +35,21 @@ function LoginPage() {
         }
 
         try {
-            // simulate network request
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-            console.log(form);
-        } catch {
-            setError("Login failed. Please try again.");
+            const payload = { email: form.email, password: form.password };
+            const res = await api.post<{ token: string }>("/auth/login", payload);
+            const token = res.data?.token;
+
+            if (!token) {
+                setError("Login failed: no token returned.");
+                return;
+            }
+
+            localStorage.setItem("authToken", token);
+            navigate("/courses");
+        } catch (err: any) {
+            console.error("Login error", err);
+            const msg = err?.response?.data?.message || "Login failed. Please check your credentials.";
+            setError(msg);
         } finally {
             setLoading(false);
         }

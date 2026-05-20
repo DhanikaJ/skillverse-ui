@@ -1,54 +1,44 @@
 import { useEffect, useState } from "react";
 import CourseCard from "./CourseCard";
+import api from "../../services/api";
+import type { Course } from "../../types";
 
-interface Course {
-  id: number;
-  title: string;
-  instructor: string;
-  price: number;
-  imageUrl: string;
+interface CoursesPageResponse {
+  content: Course[];
 }
 
 function CourseList() {
   const [search, setSearch] = useState<string>("");
   const [courses, setCourses] = useState<Course[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>("");
 
   useEffect(() => {
-    setTimeout(() => {
-      const data : Course[] = [   
-        {
-          id: 1,
-          title: "React for Beginners",
-          instructor: "John Doe", 
-          price: 49,
-          imageUrl: "https://picsum.photos/300/200?1",
-        },
-        {
-          id: 2,
-          title: "Spring Boot Masterclass",
-          instructor: "Jane Smith",
-          price: 79,
-          imageUrl: "https://picsum.photos/300/200?2",
-        },
-        {
-          id: 3,
-          title: "Docker Essentials",
-          instructor: "Alex Johnson",
-          price: 59,
-          imageUrl: "https://picsum.photos/300/200?3",
-        },
-      ];
+    const fetchCourses = async () => {
+      try {
+        const response = await api.get<CoursesPageResponse>("/courses", {
+          params: { page: 0, size: 10 },
+        });
+        setCourses(response.data.content || []);
+      } catch (error) {
+        console.error("Failed to load courses", error);
+        setError("Failed to load courses. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-      setCourses(data);
-      setLoading(false);
-    }, 1000);
+    fetchCourses();
   }, []);
 
   if (loading) {
     return (
       <div className="p-6 text-center text-gray-600">Loading courses...</div>
     );
+  }
+
+  if (error) {
+    return <div className="p-6 text-red-600">{error}</div>;
   }
 
   const filteredCourses = courses.filter((course) =>
@@ -65,7 +55,7 @@ function CourseList() {
         className="border p-2 w-full mb-6 rounded"
       />
       <div className="flex gap-6 flex-wrap">
-        {filteredCourses.map((course: Course) => (
+        {filteredCourses.map((course) => (
           <CourseCard
             key={course.id}
             id={course.id}
