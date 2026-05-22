@@ -48,7 +48,12 @@ function LoginPage() {
             navigate("/courses");
         } catch (err: any) {
             console.error("Login error", err);
-            const msg = err?.response?.data?.message || "Login failed. Please check your credentials.";
+            const msg =
+                err?.response?.data?.message ||
+                err?.response?.data?.error ||
+                err?.response?.data?.detail ||
+                err?.message ||
+                "Login failed. Please check your credentials.";
             setError(msg);
         } finally {
             setLoading(false);
