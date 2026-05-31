@@ -1,14 +1,16 @@
 export interface Course {
-    id: number;
-    title: string;
-    description: string;
-    pricelevel: string;
-    difficulty: string;
-    price: number;
-    thumbnail: string;
-    created_at: string | Date;
-    status: Status;
-    users: User[]; // For course details page to show enrolled users
+  id: number;
+  title: string;
+  instructor: string;
+  price: number;
+  imageUrl: string;
+  description: string;
+  pricelevel: string;
+  difficulty: string;
+  thumbnail: string;
+  created_at: string | Date;
+  status: Status;
+  users: User[]; // For course details page to show enrolled users
 }
 
 export interface User {
@@ -157,6 +159,17 @@ export interface Cart {
   courseId: number;
   courseTitle: string;
   addedAt: string | Date;
+}
+
+export interface EnrollmentResponse {
+  id: number;
+  progress: number;
+  enrolled_at: string | Date;
+  statusType: string;
+  course: Pick<
+    Course,
+    "id" | "title" | "description" | "thumbnail" | "price" | "difficulty" | "pricelevel"
+  >;
 }
 
 /** * Spring Data Page Wrapper - Paginated API responses * All list endpoints return this structure * Example: GET /api/v1/courses returns Page<CourseDTO> */

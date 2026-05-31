@@ -18,6 +18,12 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
 
+        {token && (
+          <li>
+            <Link to="/dashboard">My Courses</Link>
+          </li>
+        )}
+
         <li>
           <Link to="/courses">Courses</Link>
         </li>
