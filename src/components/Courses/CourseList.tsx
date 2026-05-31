@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import CourseCard from "./CourseCard";
 import api from "../../services/api";
-import type { Course } from "../../types";
-
-interface CoursesPageResponse {
-  content: Course[];
-}
+import type { Course, PaginatedResponse } from "../../types";
 
 function CourseList() {
   const [search, setSearch] = useState<string>("");
@@ -16,7 +12,7 @@ function CourseList() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await api.get<CoursesPageResponse>("/courses", {
+        const response = await api.get<PaginatedResponse<Course>>("/courses", {
           params: { page: 0, size: 10 },
         });
         setCourses(response.data.content || []);
@@ -60,9 +56,14 @@ function CourseList() {
             key={course.id}
             id={course.id}
             title={course.title}
-            instructor={course.instructor}
+            description={course.description}
+            pricelevel={course.pricelevel}
+            difficulty={course.difficulty}
             price={course.price}
-            imageUrl={course.imageUrl}
+            thumbnail={course.thumbnail}
+            created_at={course.created_at}
+            status={course.status}
+            users={course.users}
           />
         ))}
       </div>

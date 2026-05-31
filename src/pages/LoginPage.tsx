@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "../components/InputField";
 import api from "../services/api";
+import type { JwtTokenResponse } from "../types";
 
 function LoginPage() {
 
@@ -36,7 +37,7 @@ function LoginPage() {
 
         try {
             const payload = { email: form.email, password: form.password };
-            const res = await api.post<{ token: string }>("/auth/login", payload);
+            const res = await api.post<JwtTokenResponse>("/auth/login", payload);
             const token = res.data?.token;
 
             if (!token) {
