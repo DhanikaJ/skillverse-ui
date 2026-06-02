@@ -1,4 +1,4 @@
-import { Status } from "../../types";
+import type { Status, User } from "../../types";
 import "./CourseCard.css";
 import { Link } from "react-router-dom";
 
@@ -11,11 +11,13 @@ interface CourseProps {
   price: number;
   thumbnail: string;
   created_at: string | Date;
-  status: Status;
-  users: any[]; 
+  status: Status | null;
+  users: User[] | null;
 }
 
 export default function CourseCard({ id, title, description, pricelevel, difficulty, price, thumbnail, created_at, status, users }: CourseProps) {
+  const enrolledUsers = users ?? [];
+
   return (
     <Link to={`/courses/${id}`}>
       <div className="course-card border rounded-xl p-4 shadow-md w-72">
@@ -29,15 +31,15 @@ export default function CourseCard({ id, title, description, pricelevel, difficu
 
           <p className="text-gray-600">{description}</p>
 
-          <p>Instructor: {users[0]?.fname} {users[0]?.lname}</p>
+          <p>Instructor: {enrolledUsers[0]?.fname} {enrolledUsers[0]?.lname}</p>
 
-          <p className="text-gray-600">{users.length} students enrolled</p>
+          <p className="text-gray-600">{enrolledUsers.length} students enrolled</p>
 
           <p className="text-sm text-gray-500 mt-2">
             Difficulty: {difficulty} | Price Level: {pricelevel}
           </p>
 
-          <p className="text-gray-600">{status.type}</p>
+          <p className="text-gray-600">{status?.type ?? "Status unavailable"}</p>
 
           <p className="text-green-600 font-semibold mt-2">${price}</p>
         </div>

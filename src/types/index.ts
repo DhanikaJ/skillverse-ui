@@ -9,8 +9,8 @@ export interface Course {
   difficulty: string;
   thumbnail: string;
   created_at: string | Date;
-  status: Status;
-  users: User[]; // For course details page to show enrolled users
+  status: Status | null;
+  users: User[] | null; // For course details page to show enrolled users
 }
 
 export interface User {

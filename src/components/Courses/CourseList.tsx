@@ -16,9 +16,15 @@ function CourseList() {
           params: { page: 0, size: 10 },
         });
         setCourses(response.data.content || []);
-      } catch (error) {
+      } catch (error: any) {
         console.error("Failed to load courses", error);
-        setError("Failed to load courses. Please try again later.");
+        const status = error?.response?.status;
+
+        if (status === 403) {
+          setError("Access denied while loading courses. Please log in again.");
+        } else {
+          setError("Failed to load courses. Please try again later.");
+        }
       } finally {
         setLoading(false);
       }
