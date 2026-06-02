@@ -48,13 +48,19 @@ function LoginPage() {
             localStorage.setItem("authToken", token);
             navigate("/courses");
         } catch (err: any) {
-            console.error("Login error", err);
+            // Avoid noisy logs in production. Provide user-friendly error instead.
             const msg =
                 err?.response?.data?.message ||
                 err?.response?.data?.error ||
                 err?.response?.data?.detail ||
                 err?.message ||
                 "Login failed. Please check your credentials.";
+
+            if (import.meta.env.DEV) {
+                // eslint-disable-next-line no-console
+                console.error("Login error", err);
+            }
+
             setError(msg);
         } finally {
             setLoading(false);

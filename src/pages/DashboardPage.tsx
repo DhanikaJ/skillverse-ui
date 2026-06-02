@@ -32,12 +32,16 @@ function DashboardPage() {
                 );
                 setEnrollments(response.data || []);
             } catch (err: any) {
-                console.error("Failed to load enrollments", err);
                 const message =
                     err?.response?.data?.message ||
                     err?.response?.data?.error ||
                     err?.message ||
                     "Failed to load your enrolled courses.";
+
+                if (import.meta.env.DEV) {
+                    // eslint-disable-next-line no-console
+                    console.error("Failed to load enrollments", err);
+                }
 
                 setError(message);
             } finally {

@@ -1,4 +1,5 @@
 import { Navigate } from "react-router-dom";
+import { isTokenExpired } from "../services/auth";
 
 interface ProtectedRouteProps {
     children: React.ReactNode;
@@ -7,7 +8,11 @@ interface ProtectedRouteProps {
 function ProtectedRoute({ children }: ProtectedRouteProps) {
     const token = localStorage.getItem("authToken");
     const hasValidToken =
-        !!token && token !== "null" && token !== "undefined" && token.trim() !== "";
+        !!token &&
+        token !== "null" &&
+        token !== "undefined" &&
+        token.trim() !== "" &&
+        !isTokenExpired(token);
 
     if (!hasValidToken) {
         localStorage.removeItem("authToken");
@@ -18,3 +23,4 @@ function ProtectedRoute({ children }: ProtectedRouteProps) {
 }
 
 export default ProtectedRoute;
+
