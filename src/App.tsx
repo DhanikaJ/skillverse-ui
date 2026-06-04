@@ -1,21 +1,23 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
+
+import CourseDetailPage from "./pages/CourseDetailPage";
+
+import DashboardPage from "./pages/DashboardPage";
 import HomePage from "./pages/HomePage";
 import CoursesPage from "./pages/CoursesPage";
-import CourseDetailPage from "./pages/CourseDetailPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import ProtectedRoute from "./components/ProtectedRoute";
-import DashboardPage from "./pages/DashboardPage";
 
-function App() {
+export default function App() {
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-
         <Route path="/courses" element={<CoursesPage />} />
 
         <Route
@@ -43,4 +45,3 @@ function App() {
   );
 }
 
-export default App;
