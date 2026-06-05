@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center px-8 py-4 shadow-md">
+    <nav className="flex justify-between items-center mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 py-4 shadow-md">
       <h1 className="text-2xl font-bold text-blue-600">SkillVerse</h1>
 
       <ul className="flex gap-6 font-medium">

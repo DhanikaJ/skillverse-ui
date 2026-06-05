@@ -33,7 +33,7 @@ export default function CourseDetailPage() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-10">
+    <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 py-8 md:py-12">
       <div className="mb-8">
         <p className="text-sm font-semibold text-indigo-600">Course</p>
         <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">

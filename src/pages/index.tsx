@@ -34,7 +34,7 @@ export default function HomeIndexPage() {
             <div className="absolute right-10 top-10 h-52 w-52 rounded-full bg-amber-200/20 blur-2xl" />
           </div>
 
-          <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 py-12 md:py-20">
             <div className="grid gap-10 md:grid-cols-2 md:items-center">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-sm text-white backdrop-blur">
@@ -99,7 +99,7 @@ export default function HomeIndexPage() {
         </section>
 
         {/* Features */}
-        <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+        <section className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900">
               Everything you need to learn
@@ -148,7 +148,7 @@ export default function HomeIndexPage() {
         </section>
 
         {/* Callout */}
-        <section className="mx-auto max-w-6xl px-6 pb-12 md:pb-16">
+        <section className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 pb-12 md:pb-16">
           <div className="rounded-3xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 p-8 ring-1 ring-blue-100">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div>
@@ -177,7 +177,7 @@ export default function HomeIndexPage() {
 
         {/* Footer */}
         <footer className="border-t py-10">
-          <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
             <p className="text-sm text-gray-600">
               © {new Date().getFullYear()} SkillVerse. All rights reserved.
             </p>

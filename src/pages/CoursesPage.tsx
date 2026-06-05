@@ -2,7 +2,7 @@ import CourseList from "../components/Courses/CourseList";
 
 export default function CoursesPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-10">
+    <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 py-8 md:py-12">
       <div className="mb-8">
         <p className="mb-2 text-sm font-semibold tracking-wide text-indigo-600">
           Curated picks
