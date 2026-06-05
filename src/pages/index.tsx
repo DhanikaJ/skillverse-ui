@@ -43,7 +43,7 @@ export default function HomeIndexPage() {
                 </div>
 
                 <h1 className="mt-5 text-4xl font-extrabold leading-tight text-white md:text-5xl">
-                  SkillVerse — Courses that take you from{' '}
+                  SkillVerse - Courses that take you from{' '}
                   <span className="text-amber-200">0 → ready</span>
                 </h1>
 
