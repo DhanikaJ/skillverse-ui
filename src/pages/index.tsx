@@ -58,36 +58,6 @@ export default function HomeIndexPage() {
           <div className="absolute top-[40%] left-[20%] w-[300px] h-[300px] bg-gradient-to-r from-amber-400/15 to-pink-400/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
         </div>
 
-        {/* Navigation Bar */}
-        <nav className="relative z-50 backdrop-blur-md bg-white/70 border-b border-white/20 shadow-sm">
-          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">S</span>
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  SkillVerse
-                </span>
-              </div>
-              <div className="flex items-center gap-6">
-                <Link to="/courses" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                  Courses
-                </Link>
-                <Link to="/login" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                  Login
-                </Link>
-                <Link
-                  to="/register"
-                  className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-
         {/* Hero Section */}
         <section className="relative pt-20 pb-32 overflow-hidden">
           <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
