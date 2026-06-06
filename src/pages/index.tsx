@@ -394,7 +394,7 @@ export default function HomeIndexPage() {
             <div className="grid md:grid-cols-4 gap-12">
               <div className="col-span-2 md:col-span-1">
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-md">
+                  <div className="w-10 h-10 flex items-center justify-center">
                     <img src={logo} alt="SkillVerse Logo" className="w-full h-full p-1 object-contain" />
                   </div>
                   <span className="text-xl font-bold text-white">SkillVerse</span>
