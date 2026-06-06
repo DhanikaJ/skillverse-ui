@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo/whiteplanet.png";
 
 const animations = `
   @keyframes float {
@@ -194,9 +195,9 @@ export default function HomeIndexPage() {
                 Everything You Need to{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Succeed</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <h3 className="text-xl text-gray-600 max-w-2xl mx-auto text-center">
                 A complete learning platform designed to help you achieve your goals faster.
-              </p>
+              </h3>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -365,10 +366,10 @@ export default function HomeIndexPage() {
               <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6">
                 Ready to Transform Your Career?
               </h2>
-              <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10">
+              <h3 className="text-xl text-white/90 max-w-2xl mx-auto mb-10">
                 Join thousands of learners who are already building their future with SkillVerse.
                 Start your journey today.
-              </p>
+              </h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/register"
@@ -393,10 +394,10 @@ export default function HomeIndexPage() {
             <div className="grid md:grid-cols-4 gap-12">
               <div className="col-span-2 md:col-span-1">
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-                    <img src="/assets/images/logo/whiteplanet.png" alt="SkillVerse Logo" className="w-full h-full p-1" />
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-md">
+                    <img src={logo} alt="SkillVerse Logo" className="w-full h-full p-1 object-contain" />
                   </div>
-                  <span className="text-xl font-bold">SkillVerse</span>
+                  <span className="text-xl font-bold text-white">SkillVerse</span>
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Empowering learners worldwide with practical, industry-relevant skills.
