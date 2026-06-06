@@ -20,7 +20,7 @@ export default function CourseCard({ id, title, description, pricelevel, difficu
 
   return (
     <Link to={`/courses/${id}`}>
-      <div className="course-card border rounded-xl p-4 shadow-md w-full min-w-[280px] flex-1">
+      <div className="course-card border rounded-xl p-4 shadow-md w-full min-w-70 flex-1">
         <div className="course-card-content">
           <img
             src={thumbnail}

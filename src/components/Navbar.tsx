@@ -11,12 +11,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 py-4 shadow-md">
+    <nav className="flex justify-between items-center mx-auto w-full max-w-400 px-4 sm:px-6 lg:px-8 py-4 shadow-md">
       <div className="flex items-center gap-2">
         <div className="w-12 h-12 flex items-center justify-center">
           <img src={logo} alt="SkillVerse Logo" className="w-full h-full p-1 object-contain" />
         </div>
-        <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <span className="text-2xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           SkillVerse
         </span>
       </div>

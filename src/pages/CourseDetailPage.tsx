@@ -33,7 +33,7 @@ export default function CourseDetailPage() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div className="mx-auto w-full max-w-400 px-4 sm:px-6 lg:px-8 py-8 md:py-12">
       <div className="mb-8">
         <p className="text-sm font-semibold text-indigo-600">Course</p>
         <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -60,7 +60,7 @@ export default function CourseDetailPage() {
               </p>
             </div>
 
-            <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-fuchsia-500" />
+            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-indigo-500 to-fuchsia-500" />
           </div>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -76,7 +76,7 @@ export default function CourseDetailPage() {
           </div>
         </div>
 
-        <div className="rounded-3xl bg-gradient-to-b from-white to-indigo-50 p-6 shadow-sm ring-1 ring-black/5">
+        <div className="rounded-3xl bg-linear-to-b from-white to-indigo-50 p-6 shadow-sm ring-1 ring-black/5">
           <h3 className="text-lg font-bold text-slate-900">Enrollment</h3>
           <p className="mt-2 text-sm text-slate-600">
             Enroll to start learning and track progress.

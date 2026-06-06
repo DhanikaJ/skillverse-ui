@@ -2,7 +2,7 @@ import CourseList from "../components/Courses/CourseList";
 
 export default function CoursesPage() {
   return (
-    <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div className="mx-auto w-full max-w-400 px-4 sm:px-6 lg:px-8 py-8 md:py-12">
       <div className="mb-8">
         <p className="mb-2 text-sm font-semibold tracking-wide text-indigo-600">
           Curated picks
@@ -15,7 +15,7 @@ export default function CoursesPage() {
         </p>
       </div>
 
-      <div className="rounded-3xl bg-gradient-to-b from-white to-indigo-50 p-4 shadow-sm ring-1 ring-black/5">
+      <div className="rounded-3xl bg-linear-to-b from-white to-indigo-50 p-4 shadow-sm ring-1 ring-black/5">
         <CourseList />
       </div>
     </div>

@@ -51,21 +51,21 @@ export default function HomeIndexPage() {
     <>
       <style>{animations}</style>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <div className="min-h-screen bg-linear-to-br from-slate-50 via-white to-blue-50">
         {/* Animated Background Elements */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-          <div className="absolute top-[40%] left-[20%] w-[300px] h-[300px] bg-gradient-to-r from-amber-400/15 to-pink-400/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
+          <div className="absolute top-[-10%] left-[-5%] w-125 h-125 bg-linear-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-150 h-150 bg-linear-to-r from-emerald-400/20 to-cyan-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-[40%] left-[20%] w-75 h-75 bg-linear-to-r from-amber-400/15 to-pink-400/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
         </div>
 
         {/* Hero Section */}
         <section className="relative pt-20 pb-32 overflow-hidden">
-          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-400 px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left Content */}
               <div className="animate-fade-in-up">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-blue-100 to-purple-100 border border-blue-200 mb-6">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -75,7 +75,7 @@ export default function HomeIndexPage() {
 
                 <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
                   <span className="text-slate-900">Master New </span>
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+                  <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
                     Skills Today
                   </span>
                 </h1>
@@ -88,7 +88,7 @@ export default function HomeIndexPage() {
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/courses"
-                    className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
+                    className="group relative px-8 py-4 rounded-xl bg-linear-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       Explore Courses
@@ -96,7 +96,7 @@ export default function HomeIndexPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </Link>
 
                   <Link
@@ -113,7 +113,7 @@ export default function HomeIndexPage() {
                     {[1, 2, 3, 4, 5].map((i) => (
                       <div
                         key={i}
-                        className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-blue-400 to-purple-400 flex items-center justify-center text-white text-xs font-bold"
+                        className="w-10 h-10 rounded-full border-2 border-white bg-linear-to-br from-blue-400 to-purple-400 flex items-center justify-center text-white text-xs font-bold"
                         style={{ zIndex: 10 - i }}
                       >
                         {String.fromCharCode(64 + i)}
@@ -139,44 +139,44 @@ export default function HomeIndexPage() {
               <div className="relative animate-scale-in" style={{ animationDelay: '0.3s' }}>
                 <div className="relative rounded-3xl bg-white/80 backdrop-blur-xl p-8 shadow-2xl border border-white/50">
                   {/* Decorative elements */}
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl rotate-12 opacity-20" />
-                  <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-full opacity-20 blur-xl" />
+                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-linear-to-br from-blue-500 to-purple-500 rounded-2xl rotate-12 opacity-20" />
+                  <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-linear-to-br from-emerald-400 to-cyan-400 rounded-full opacity-20 blur-xl" />
 
                   <h3 className="text-2xl font-bold text-slate-900 mb-6">Why Choose SkillVerse?</h3>
 
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="group p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 border border-blue-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300">
+                    <div className="group p-4 rounded-2xl bg-linear-to-br from-blue-50 to-blue-100/50 border border-blue-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300">
                       <div className="text-3xl font-bold text-blue-600">50+</div>
                       <div className="text-sm text-gray-600 mt-1">Expert Courses</div>
                     </div>
-                    <div className="group p-4 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100/50 border border-purple-200 hover:border-purple-400 hover:shadow-lg transition-all duration-300">
+                    <div className="group p-4 rounded-2xl bg-linear-to-br from-purple-50 to-purple-100/50 border border-purple-200 hover:border-purple-400 hover:shadow-lg transition-all duration-300">
                       <div className="text-3xl font-bold text-purple-600">4.8★</div>
                       <div className="text-sm text-gray-600 mt-1">Average Rating</div>
                     </div>
-                    <div className="group p-4 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100/50 border border-emerald-200 hover:border-emerald-400 hover:shadow-lg transition-all duration-300">
+                    <div className="group p-4 rounded-2xl bg-linear-to-br from-emerald-50 to-emerald-100/50 border border-emerald-200 hover:border-emerald-400 hover:shadow-lg transition-all duration-300">
                       <div className="text-3xl font-bold text-emerald-600">95%</div>
                       <div className="text-sm text-gray-600 mt-1">Completion Rate</div>
                     </div>
-                    <div className="group p-4 rounded-2xl bg-gradient-to-br from-amber-50 to-amber-100/50 border border-amber-200 hover:border-amber-400 hover:shadow-lg transition-all duration-300">
+                    <div className="group p-4 rounded-2xl bg-linear-to-br from-amber-50 to-amber-100/50 border border-amber-200 hover:border-amber-400 hover:shadow-lg transition-all duration-300">
                       <div className="text-3xl font-bold text-amber-600">24/7</div>
                       <div className="text-sm text-gray-600 mt-1">Access & Support</div>
                     </div>
                   </div>
 
                   {/* Progress visualization */}
-                  <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-slate-50 to-slate-100 border border-slate-200">
+                  <div className="mt-6 p-4 rounded-2xl bg-linear-to-r from-slate-50 to-slate-100 border border-slate-200">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-semibold text-slate-700">Your Learning Journey</span>
                       <span className="text-sm font-bold text-blue-600">75%</span>
                     </div>
                     <div className="h-3 rounded-full bg-slate-200 overflow-hidden">
-                      <div className="h-full w-3/4 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse" />
+                      <div className="h-full w-3/4 rounded-full bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse" />
                     </div>
                   </div>
                 </div>
 
                 {/* Floating badge */}
-                <div className="absolute -top-6 -right-6 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold text-sm shadow-lg animate-float">
+                <div className="absolute -top-6 -right-6 px-4 py-2 rounded-full bg-linear-to-r from-emerald-500 to-cyan-500 text-white font-bold text-sm shadow-lg animate-float">
                   ✨ Top Rated
                 </div>
               </div>
@@ -186,14 +186,14 @@ export default function HomeIndexPage() {
 
         {/* Features Section */}
         <section className="py-24 relative">
-          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-400 px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 font-semibold text-sm mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-blue-100 to-purple-100 text-blue-700 font-semibold text-sm mb-4">
                 Features
               </span>
               <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">
                 Everything You Need to{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Succeed</span>
+                <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Succeed</span>
               </h2>
               <h3 className="text-xl text-gray-600 max-w-2xl mx-auto text-center">
                 A complete learning platform designed to help you achieve your goals faster.
@@ -281,10 +281,10 @@ export default function HomeIndexPage() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Hover gradient background */}
-                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-300 bg-gradient-to-br ${feature.color}`} />
+                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-300 bg-linear-to-br ${feature.color}`} />
 
                   {/* Icon */}
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-linear-to-br ${feature.color} text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {feature.icon}
                   </div>
 
@@ -293,7 +293,7 @@ export default function HomeIndexPage() {
                   <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
 
                   {/* Decorative corner */}
-                  <div className={`absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-gradient-to-br ${feature.color}`} />
+                  <div className={`absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-linear-to-br ${feature.color}`} />
                 </div>
               ))}
             </div>
@@ -301,10 +301,10 @@ export default function HomeIndexPage() {
         </section>
 
         {/* Popular Courses Preview */}
-        <section className="py-24 bg-gradient-to-b from-white to-slate-50">
-          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+        <section className="py-24 bg-linear-to-b from-white to-slate-50">
+          <div className="mx-auto max-w-400 px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 font-semibold text-sm mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-linear-to-r from-purple-100 to-pink-100 text-purple-700 font-semibold text-sm mb-4">
                 Popular Courses
               </span>
               <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">
@@ -327,7 +327,7 @@ export default function HomeIndexPage() {
                   to="/courses"
                   className="group block p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
                 >
-                  <div className={`w-full h-32 rounded-2xl bg-gradient-to-br ${course.color} mb-4 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-300`}>
+                  <div className={`w-full h-32 rounded-2xl bg-linear-to-br ${course.color} mb-4 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-300`}>
                     <span className="text-white text-4xl font-bold">{course.title.charAt(0)}</span>
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">{course.title}</h3>
@@ -342,7 +342,7 @@ export default function HomeIndexPage() {
             <div className="text-center mt-12">
               <Link
                 to="/courses"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-linear-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 View All Courses
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -355,13 +355,13 @@ export default function HomeIndexPage() {
 
         {/* CTA Section */}
         <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600" />
+          <div className="absolute inset-0 bg-linear-to-r from-blue-600 via-purple-600 to-pink-600" />
           <div className="absolute inset-0 opacity-30">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-300/20 rounded-full blur-3xl" />
           </div>
 
-          <div className="relative mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto max-w-400 px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6">
                 Ready to Transform Your Career?
@@ -390,7 +390,7 @@ export default function HomeIndexPage() {
 
         {/* Footer */}
         <footer className="bg-slate-900 text-white py-16">
-          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-400 px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-4 gap-12">
               <div className="col-span-2 md:col-span-1">
                 <div className="flex items-center gap-2 mb-4">
